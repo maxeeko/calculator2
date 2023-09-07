@@ -1,6 +1,11 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) throws Exception {
-        System.out.println(calc("1 + 5"));
+        Scanner scanner = new Scanner(System.in);
+        String inputText = scanner.nextLine();
+
+        System.out.println(calc(inputText));
     }
 
     public static String calc(String input) throws Exception {
