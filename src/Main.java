@@ -15,15 +15,15 @@ public class Main {
             throw new Exception(messageError);
         }
         for (int i = 0; i < operands.length; i++) {
-            if (operands[i].length() > 2) {
+            if (operands[i].length() > 3) {
                 throw new Exception(messageError);
             }
         }
         int num1 = Integer.parseInt(operands[0].trim());
         int num2 = Integer.parseInt(operands[1].trim());
 
-        if (num1 > 10 || num2 > 10) {
-            throw new Exception("Числа не должны превышать 10");
+        if ((num1 > 10 || num1 < 1) || (num2 > 10 || num2 < 1)) {
+            throw new Exception("Числа не должны быть отрицательными, равными 0 и превышать 10");
         }
 
         int result = 0;
